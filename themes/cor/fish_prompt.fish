@@ -34,12 +34,12 @@ function fish_prompt
       echo -n -s (set_color -b cyan black) '[' (basename "$VIRTUAL_ENV") ']' $normal ' '
   end
   if test $last_status -ne 0
-    set ret_status $red $last_status '↵' $normal
+    set ret_status $red ' ' $last_status '↵' $normal
   end
 
   # Display the current directory name
-  echo -n -s $green (whoami) $dark_green @ $green (hostname|cut -d . -f 1) $dark_green › $yellow (prompt_pwd) $ret_status $dark_yellow (emoji-clock) ' ⁑' $normal
-  #echo -n -s $green (whoami) $dark_green @ $green (hostname|cut -d . -f 1) $dark_green › $yellow (prompt_pwd) $ret_status $dark_yellow ⁑ $normal
+  echo -n -s › $yellow (prompt_pwd) $ret_status ' ' $dark_yellow ╼ $normal
+  #echo -n -s $green (whoami) $dark_green @ $green (hostname|cut -d . -f 1) $dark_green › $yellow (prompt_pwd) $ret_status $dark_yellow ╼ $normal
 
   # Terminate with a nice prompt char
   echo -n -s ' ' $normal
