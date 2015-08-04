@@ -38,8 +38,7 @@ function fish_prompt
   end
 
   # Display the current directory name
-  echo -n -s › $yellow (prompt_pwd) $ret_status ' ' $dark_yellow ╼ $normal
-  #echo -n -s $green (whoami) $dark_green @ $green (hostname|cut -d . -f 1) $dark_green › $yellow (prompt_pwd) $ret_status $dark_yellow ╼ $normal
+  echo -n -s $green (hostname|cut -d . -f 1) $normal › $yellow (prompt_pwd) $ret_status ' ' $dark_yellow ╼ $normal
 
   # Terminate with a nice prompt char
   echo -n -s ' ' $normal
